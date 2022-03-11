@@ -62,6 +62,7 @@ function initScrollIntoView(){;
   });
 }
 initScrollIntoView();
+<<<<<<< HEAD
 
   function initSmoothScroll() {
   const sections = document.querySelectorAll('.js-scroll');
@@ -86,3 +87,5 @@ initScrollIntoView();
 }
 initSmoothScroll()
 
+=======
+>>>>>>> 72f907e0d255a35ec3ae2854dcb0c2ede8d3b301
