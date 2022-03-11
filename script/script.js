@@ -80,7 +80,6 @@ initScrollIntoView();
         }
       }) 
     }
-
     window.addEventListener('scroll', animationSmoothScroll);
   }
 }
