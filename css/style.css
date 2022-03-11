@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&display=swap');
+.bigFont {
+  font-size: 150%;
+}
+body, h1, h2, h3, ul, li, p, dd, dt, dl {
+  margin: 0px;
+  padding: 0px;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+body{
+  background: #faf6ed;
+  color: #222;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+
+}
+.menu{
+  grid-column: 3/5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #FB5;
+}
+.menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.menu li a{
+  display: block;
+  padding: 15px 10px;
+  margin-right: 10px;
+  color: #222;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: .1em ;
+}
+.grid-section{
+  grid-column: 2/4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 100px 300px 1fr;
+  margin-bottom: 4rem;
+  grid-gap: 15px
+  ;
+}
+.titulo{
+  font-family: 'Playfair Display SC', Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: normal;
+  margin-bottom: .1rem;
+  grid-column: 1/4;
+}
+.animais h2{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+  color: #E54;  
+}
+.animais h2::before{
+  content: ' ';
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: #FB5;
+}
+.animais p{
+  font-family: Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.animais-lista{
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+  cursor: pointer;
+}
+.animais-lista::-webkit-scrollbar{
+  width: 18px;
+}
+.animais-lista::-webkit-scrollbar-thumb{
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+.animais-lista::-webkit-scrollbar-track{
+  background: #faf6ed;
+}
+.animais-descricao{
+  grid-column: 3;
+  margin-bottom: 3rem;
+}
+.faq-lista{
+  grid-column: 2/4;
+}
+.faq-lista dt{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #E54;
+  cursor: pointer;
+}
+.faq-lista dt::before{
+  content: '••••';
+  font-size: .5em;
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+  margin-right: 10px;
+  background: #FB5;
+
+}
+.faq-lista dd{
+  font-family: Helvetica, Arial;
+  margin-bottom: .5rem;
+  margin-right: 30px;
+}
+.mapa{
+  grid-column: 2;
+  width: 300px;
+}
+.dados{
+  grid-column: 3;
+}
+.dados li{
+  font-family: Helvetica, Arial;
+  letter-spacing: .1em;
+}
+.dados li::before{
+  content: '';
+  margin-right: 10px;
+  width: 20px;
+  height: 10px;
+  display: inline-block;
+  background: #FB5;
+}
+.copy{
+  grid-column: 3/5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  background: #FB5;
+}
+.copy a{
+  text-decoration: none;
+  color: rgb(126, 18, 214);
+  padding: 14px 0px;
+}
+.js .js-tabcontent section{
+  display: none;
+}
+.js .js-tabcontent section.ativo{
+  display: block !important;
+  animation: show .5s ease-in-out forwards;
+}
+
+.js .js-accordion dd{
+  display: none;
+}
+.js .js-accordion dd.ativo{
+  display: block !important;
+  animation: ddContentView .5s forwards  ease-in-out;
+}
+
+@keyframes show {
+  from {
+    transform: translate3d(-30px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes ddContentView {
+  from {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
