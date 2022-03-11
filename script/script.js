@@ -28,9 +28,9 @@ initHandleAnimaisLista();
 function initAccordionList() {
 
   const menuDt = document.querySelectorAll('.js-accordion dt');
+  menuDt[0].nextElementSibling.classList.add('ativo');
   if (menuDt.length) {
     
-    menuDt[0].nextElementSibling.classList.add('ativo');
 
     menuDt.forEach((item) => {
 
