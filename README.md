@@ -19,4 +19,4 @@ e ```::-webkit-scrollbar-thumb```
 
 ![res](https://user-images.githubusercontent.com/83686681/157348341-a68a1e27-b9ba-4b1c-a0ae-ac2249536746.gif)
 
-## [Você pode acessar o projeto clicando aqui!](https://rafaelgomesxavier.github.io/animaisFantasticos-Origamid/)git
+## [Você pode acessar o projeto clicando aqui!](https://rafaelgomesxavier.github.io/animaisFantasticos-Origamid/)

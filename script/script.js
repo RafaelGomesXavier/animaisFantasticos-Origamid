@@ -1,31 +1,45 @@
-function aciveContentEvent(){
+function initHandleAnimaisLista() {
+
   const imagens = document.querySelectorAll('.js-tabmenu li');
   const contents = document.querySelectorAll('.js-tabcontent section');
-  contents[0].classList.add('ativo');
-  
-  function getIndex(index) {
-    contents.forEach(content => {
-      content.classList.remove('ativo');
+  if (imagens.length && contents.length) {
+
+    contents[0].classList.add('ativo');
+    function getIndex(index) {
+
+      contents.forEach(content => {
+
+        content.classList.remove('ativo');
+      })
+
+      contents[index].classList.add('ativo');
+    }
+
+    imagens.forEach((imagem, index) => {
+      imagem.addEventListener('click', function () {
+        getIndex(index);
+      })
     })
-    contents[index].classList.add('ativo');
   }
-
-  imagens.forEach((imagem, index)=>{
-    imagem.addEventListener('click', function(){
-      getIndex(index);
-    })
-  })
 }
-function descriptionListAnimate(){
-  const menuDt = document.querySelectorAll('.js-accordion dt');
-  
-  menuDt.forEach((item)=>{
-    item.addEventListener('click',function(){
-      item.nextElementSibling.classList.toggle('ativo');
-  
-    });
-  });
 
-};
-descriptionListAnimate();
-aciveContentEvent()
+initHandleAnimaisLista();
+
+function initAccordionList() {
+
+  const menuDt = document.querySelectorAll('.js-accordion dt');
+  if (menuDt.length) {
+    
+    menuDt[0].nextElementSibling.classList.add('ativo');
+
+    menuDt.forEach((item) => {
+
+      item.addEventListener('click', function () {
+
+        item.nextElementSibling.classList.toggle('ativo');
+      });
+    });
+  };
+}
+
+initAccordionList()
